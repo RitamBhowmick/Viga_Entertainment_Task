@@ -7,8 +7,8 @@ const sequelize = new Sequelize({
   port: process.env.DB_PORT || 5432,
   database: process.env.DB_NAME || 'Vite-entertainment-task',
   username: process.env.DB_USER || 'postgres',
-  password: process.env.DB_PASSWORD || 'Messi@11Neymar',
-  ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : false,
+  password: process.env.DB_PASSWORD,
+  logging: console.log // Add this line to enable logging
 });
 
 module.exports = sequelize;
